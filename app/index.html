@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+	  <title>车辆信息服务管理平台</title>
+    <!-- <meta name="renderer" content="webkit|ie-comp|ie-stand"> -->
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <script>
+      (function () {
+        var ua = navigator.userAgent.toLowerCase();
+        console.log(ua);
+        if (ua.indexOf('msie') > 0) {
+          var ie = ua.match(/msie ([\d.]+)/)[1];
+          // console.log(ua.match(/msie ([\d.]+)/));
+          // var trident = ua.match(/trident\/\d/).toString().split('/')[1];
+          //console.log(trident);
+          if (ie - 0 <= 9) {
+            alert('IE:' + ie);
+            // location.href="/app/utils/bowers.html";
+          }
+        }
+      })();
+    </script>
+    <style>
+      div#root,
+      div#root > div{
+        width: 100%;
+        height: 100%;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <img src="./static/loading.gif" style="margin: auto; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" alt="loading...">
+      </div>
+    </div>
+    <!-- 高德 -->
+    <script src="http://webapi.amap.com/maps?v=1.3&amp;key=0b6f5cc2a922bffaef65150e1bdf7b9d&&plugin=AMap.Scale,AMap.OverView,AMap.ToolBar,AMap.MarkerClusterer"></script>
+    <script src="//webapi.amap.com/ui/1.0/main.js"></script>
+    <!-- <script type="text/javascript" src="/build/bundle.js"></script> -->
+    <!-- jquery -->
+    <!-- <script src="/app/utils/js/jquery-3.1.1.min.js"></script>  -->
+    <!-- webpack -->
+    <!-- <script>
+      $(function(){
+        console.log(111);
+      });
+    </script> -->
+  </body>
+</html>

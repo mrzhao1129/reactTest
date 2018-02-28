@@ -1,0 +1,602 @@
+@activeBlue: rgb(16, 142, 233);
+@hoverBlue: rgb(73, 169, 238);
+@hrSmoke: rgb(233, 233, 233);
+
+button>svg {
+  // position: absolute;
+  // top: 5.5px;
+  // left: 5.5px;
+  // bottom: 5.5px;
+  // right: 5.5px;
+  margin-bottom: 3px;
+}
+//Modal加上StandModal默认表示模态框为默认表单样式
+.standModal {
+  // .addForm {
+  //   padding: 20px 0 0 0;
+  //   background: #fbfbfb;
+  //   border: 1px solid #d9d9d9;
+  //   border-radius: 6px;
+  //   margin-top: -16px;
+  //   margin-bottom: -16px;
+  // }
+  
+  //----修改antd官方样式----
+  .ant-modal-body {
+    background: #fbfbfb;
+    padding-bottom: 0;
+    padding-top: 24px;
+  }
+  //----E修改antd官方样式----
+}
+.standModalWithoutForm {
+  //----修改antd官方样式----
+  .ant-modal-body {
+    background: #fbfbfb;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  //----E修改antd官方样式----
+}
+.standModalChangeColor {
+  //----修改antd官方样式----
+  .ant-modal-body {
+    background: #fbfbfb;
+  }
+  //----E修改antd官方样式----
+}
+.ant-tree.my-tree {
+  background: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}
+//标准页
+.standPage {
+  .search-form {
+    padding: 24px 24px 8px 24px;
+    background: #fbfbfb;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    .queryBtnGroup {
+      display: flex;
+      // justify-content: space-around;
+      margin-bottom: 16px;
+      &>button {
+        margin-right: 3px;
+      }
+      button:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .search-result-list {
+    // background: #fbfbfb;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #d9d9d9;
+  }
+}
+//-----框架右上角头像相关样式-----
+.userList {
+  margin: -8px -16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  // height: 100px;
+  width: 100px;
+  dt {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background .3s, color .3s;
+    height: 33px;
+    cursor: pointer;
+    i {
+      margin-left: 5px;
+    }
+    &:hover {
+      background: @hoverBlue;
+      color: white;
+    }
+    &:active {
+      background: @activeBlue;
+      color: white;
+    }
+    &:first-child {
+      border-radius: 4px 4px 0 0;
+      &:hover {
+        background: red;
+      }
+      &:active {
+        background: rgb(230, 0, 0);
+      }
+    }
+    &:last-child {
+      border-radius: 0 0 4px 4px;
+    }
+    span {
+      margin-left: 8px;
+    }
+  }
+}
+//概览
+.overview {
+  position: relative;
+  .upDiv {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    z-index: 100;
+  }
+  .searchForm {
+    position: absolute; 
+    width: 288px; 
+    left: 0; 
+    right: 0; 
+    top: 10px; 
+    margin: auto; 
+    z-index: 100;
+  }
+  .carCalc {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    .upDiv;
+  }
+  .mapDiv {
+    width: 100%; 
+    min-height: 600px;
+    background: #fbfbfb;
+    // background: blue;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    .m0 {
+      background: url(../../utils/img/m0.png);
+      width: 53px;
+      height: 52px;
+      line-height: 52px;
+      text-align: center;
+    }
+    .m1 {
+      background: url(../../utils/img/m1.png);
+      width: 56px;
+      height: 55px;
+      line-height: 55px;
+      text-align: center;
+    }
+    .m2 {
+      background: url(../../utils/img/m2.png);
+      width: 66px;
+      height: 65px;
+      line-height: 65px;
+      text-align: center;
+    }
+    .m3 {
+      background: url(../../utils/img/m3.png);
+      width: 78px;
+      height: 77px;
+      line-height: 77px;
+      text-align: center;
+    }
+    .m4 {
+      background: url(../../utils/img/m4.png);
+      width: 90px;
+      height: 89px;
+      line-height: 89px;
+      text-align: center;
+    }
+    .markerInfo {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 6px;
+      border: #d8d8d8 1px solid;
+      padding: 3px;
+      .title {
+        text-indent: 10px;
+        background: #d8d8d8;
+      }
+      .close {
+        float: right;
+        margin-right: 3px;
+      }
+      label {
+        width: 75px;
+        display: inline-block;
+        text-align: right;
+      }
+      button {
+        margin-left: 60px;
+        margin-top: 5px;
+      }
+    }
+  }
+  .cityDiv {
+    @height: 474px;
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    z-index: 100;
+    height: @height;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.6);
+    .hideBtnDiv {
+      width: 20px;
+      height: inherit;
+      float: left;
+      line-height: @height;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 6px 0 0 6px;
+      transition: background .3s, color .3s;
+      &:hover {
+        background: rgba(73, 169, 238, 0.8);
+        color: white;
+      };
+      &:active {
+        background: rgba(16, 142, 233, 1);
+        color: white;
+      }
+    }
+    .chartDiv {
+      position: relative;
+      float: left;
+      display: none;
+      width: 500px;
+      height: @height;
+      button {
+        position: absolute;
+        top: 5px;
+        right: 50px;
+        z-index: 101;
+      }
+      >div {
+        width: 500px;
+        height: @height;
+      }
+    }
+    .tableDiv {
+      float: left;
+      // background: white;
+      background: rgba(255, 255, 255, 0.6); 
+      border-radius: 0 6px 6px 0;
+    }
+  }
+  
+}
+//历史轨迹
+.hisPath {
+  position: relative;
+  .searchForm {
+    .overview.searchForm;
+    width: 611px;
+  }
+  .pointInfo {
+    .overview.cityDiv;
+    top: 45px;
+    width: 200px;
+    height: 150px;
+    padding: 2px;
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      height: 100%;
+      tbody td {
+        border-top: 1px solid @activeBlue;
+      }
+      tbody tr.db {
+        background: @hoverBlue;
+      }
+    } 
+  }
+  .carInfo {
+    .pointInfo;
+    top: 205px;
+    height: 350px;
+  }
+  .playTool {
+    .overview.searchForm;
+    width: 171px + 20px * 2;
+    background: rgba(242, 242, 242, 0.8);
+    top: 550px;
+    bottom: auto;
+    padding: 5px 20px;
+    border-radius: 38px;
+    .firstBtn {
+      margin-right: 10px;
+    }
+  }
+  .mapDiv {
+    .overview.mapDiv;
+  }
+  .tableDiv {
+    height: 100px;
+  }
+}
+//历史数据
+.hisData {
+  background: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  min-height: 600px;
+  padding: 5px;
+  position: relative;
+  .searchForm {
+    // display: inline-block;
+    width: 611px;
+    position: absolute;
+    margin: auto;
+    left: 0; right: 0;
+    margin-top: 5px;
+  }
+  .treeDiv {
+    display: inline-block;
+    // border: 1px solid #d9d9d9;
+    // border-right-color: rgba(0, 0, 0, 0);
+    // background-color: white;
+    border-radius: 6px 0 0 6px;
+    width: 220px;
+    height: 400px;
+    margin: 55px 0 0 0;
+    vertical-align: top;
+    height: 540px;
+    padding-left: 20px;
+  }
+  .chartDiv {
+    display: inline-block;
+    border: 1px solid #d9d9d9;
+    background-color: white;
+    border-radius: 6px;
+    width: calc(~"100% - 220px");
+    min-height: 400px;
+    margin: 55px 0 0 0;
+    vertical-align: top;
+    min-height: 540px;
+    // overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .ant-spin-nested-loading {
+    height: 100%;
+  }
+  // .mapDiv {
+  //   .hisPath.mapDiv;
+  // }
+}
+.hisDataDownModal {
+  .ant-modal-body {
+    padding: 0;
+    &>div{
+      padding: 10px;
+    }
+  }
+  hr {
+    border: none;
+    border-top: 1px solid rgb(233, 233, 233);
+  }
+}
+//报警管理、直接报警、间接报警、基本页组
+.alertManage, .indeterminate, .basePageGroup {
+  .search-form {
+    padding: 24px 24px 8px 24px;
+    background: #fbfbfb;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    .queryBtnGroup {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      button {
+        margin-right: 3px;
+      }
+      button:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .search-result-list {
+    // background: #fbfbfb;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #d9d9d9;
+  }
+}
+//直接报警参数
+.directSet {
+  .standPage;
+}
+//间接报警参数
+.indirectSet {
+  .standPage;
+}
+// 终端信息
+.deviceInfo {
+  .standPage;
+}
+//参数设置
+.deviceParam {
+  .standPage;
+}
+//参数设置-新增配置
+.deviceParamAdd {
+  .choicedev {
+    display: flex;
+    justify-content: space-between;
+    line-height: 28px;
+    .item {
+      // vertical-align: text-bottom;
+    }
+    table {
+      th, td {
+        border: 1px solid black;
+      }
+    }
+  } 
+}
+//软件升级
+.deviceUpdate {
+  .standPage;
+}
+//软件升级-新增配置
+.deviceUpdateAdd {
+  .choicedev {
+    display: flex;
+    justify-content: space-between;
+    line-height: 28px;
+    .item {
+      // vertical-align: text-bottom;
+    }
+  }
+}
+//分组管理//分组管理-组成员管理
+.groupMag {
+  .standPage;
+}
+.groupItemMag {
+  .standPage;
+  .submitButton {
+    float: right;
+    margin: 10px 0 0 3px;
+  }
+}
+//sim卡管理
+.simMag, .carMag {
+  .standPage;
+}
+//sim卡数据统计
+.simCharts {
+  background: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  min-height: 600px;
+  padding: 5px;
+  position: relative;
+  .searchForm {
+    // display: inline-block;
+    width: 672px;
+    position: absolute;
+    margin: auto;
+    left: 0; right: 0;
+    margin-top: 5px;
+    //z-index: 101;
+  }
+  .chartsRow {
+    margin-top: 55px;
+  }
+  .ant-card-body {
+    height: 480px;
+    padding: 0;
+  }
+}
+.coutrolMag {
+  .standPage;
+}
+//ymj add
+.realSite{
+  position: relative;
+  .mapDiv {
+    .overview.mapDiv;
+  }
+  .searchForm{
+    .overview.searchForm;
+    width: 800px;
+  }
+  .searchresult{
+    @height: 400px;
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    z-index: 100;
+    height: @height;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    .hideBtnRight {
+      width: 16px;
+      height: inherit;
+      float: left;
+      line-height: @height;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 6px 0 0 6px;
+      &:hover {
+        background: rgba(73, 169, 238, 0.8);
+        color: white;
+      };
+      &:active {
+        background: rgba(16, 142, 233, 1);
+        color: white;
+      }
+    }
+    .searchResultTable {
+      position: relative;
+      float: left;
+      display: none;
+      width: 600px;
+      height: @height;
+    }
+
+  }
+  .carInfo{
+    position: absolute;
+    bottom: 5px;
+    @width:100%;
+    
+    width: @width;
+    z-index: 100;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    .hideBtnBottom{
+      height:16px;
+      width: inherit;
+      text-align: center;
+
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 6px 0 0 6px;
+      &:hover {
+        background: rgba(73, 169, 238, 0.8);
+        color: white;
+      };
+      &:active {
+        background: rgba(16, 142, 233, 1);
+        color: white;
+      }
+    }
+    .carInfoTable{
+       position: relative;
+       display: none;
+       width: @width;
+       height:250px;
+    }
+  }
+}
+//角色管理
+.partManage {
+  .standPage;
+}
+//组织机构管理
+.organizationMag, .sysMag, .menuMag, .carTypeMag {
+  .standPage;
+}
+//ota设备管理
+.otaDevMag {
+  .standPage;
+  // .search-form>div:first-child {
+  //   display: flex;
+  //   justify-content: space-around;
+  // }
+  // .search-form>div:first-child>div {
+  //   padding-right: 0!important;
+  // }
+  hr {
+    position: relative;
+    top: -8px;
+    left: -24px;
+    width: calc(~'100% + 48px');
+    height: 0;
+    margin: 8px 0;
+    padding: 0;
+    border: 0;
+    height: 1px;
+    background: #d9d9d9;
+  }
+}

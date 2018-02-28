@@ -1,0 +1,80 @@
+@import "../../utils/style/const.less";
+
+.ant-layout-sider-children {
+  height: 100%;
+  overflow: auto;
+}
+
+.logo {
+  height: 50px;
+  // background: #333;
+  background: @logoBGC;
+  border-radius: @redius;
+  margin: 7px;
+  // background-image: url('../../utils/img/0.jpg');
+}
+
+.ant-layout-sider-collapsed .anticon {
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.ant-layout-sider-collapsed .nav-text {
+  display: none;
+}
+
+.ant-layout-sider-collapsed .ant-menu-submenu-vertical > .ant-menu-submenu-title:after {
+  display: none;
+}
+
+.ant-layout{
+  height: 100%;
+}
+.singlePage {
+
+}
+.header {
+  background: 'rgb(64, 64, 64)'; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+  // text-align: center;
+  span.title {
+    color: #777777;
+  }
+  i {
+    font-size: 15px;
+    cursor: pointer;
+    transition: color .3s;
+    &:hover {
+      color: #108ee9;
+    }
+  }
+  .userDiv {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 3px;
+    transition: background-color .3s;
+    &:hover {
+      background-color:rgb(89, 89, 89);
+    }
+    .userHead {
+      width: 35px;
+      height: 35px;
+      margin-right: 5px;
+    }
+  }
+}
+.content {
+  // margin: '0 16px 0'; 
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 16px 16px 0;
+}
+.footer {
+  text-align: center;
+  padding: 12px 50px;
+}
